@@ -25,11 +25,11 @@ class Car extends VehicleModule {
   loadPassenger(num) {
     if (this.passenger < this.maxPassenger) {
       if (this.passenger + num <= this.maxPassenger) {
-        this.passenger += num;
+        this.passenger = num;
         return this.passenger;
       } else {
         console.log(
-          "There is not enough room for" + " " + this.passenger + " " + "people"
+          "There is not enough room for" + " " + num + " " + "people"
         );
       }
     } else {
@@ -57,5 +57,5 @@ class Car extends VehicleModule {
 
 let newCar = new Car("Mercury", "Sedan", "2010", "black", 25000);
 newCar.start();
-newCar.loadPassenger(6);
+newCar.loadPassenger(8);
 newCar.service(378888);
